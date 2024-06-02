@@ -258,7 +258,7 @@ header{
 
 .fv__scroll{
     position: absolute;
-    bottom: 7%;
+    bottom: 17%;
     right: 2%;
 }
 
@@ -271,13 +271,33 @@ header{
 }
 
 .fv__scroll p::after{
+    position: absolute;
     content: '';
-    flex-grow: 1;/* 余白を分け与える */
-    height: 76px;
+    top: 0px;
+    flex-grow: 1;
+    height: 114px;
     width: 1px;
     background: #FFF;
-    margin-top: 10px;
+    margin-top: 40px;
+    animation: pathmove 2.4s ease-in-out infinite;
+    opacity: 0;
 }
+@keyframes pathmove{
+    0%{
+      height:0;
+      top:0;
+      opacity: 0;
+    }
+    30%{
+      height:30px;
+      opacity: 1;
+    }
+    100%{
+      height:0;
+      top:50px;
+      opacity: 0;
+    }
+  }
 
 /* ------fv_news------- */
 .fv__news{
