@@ -725,7 +725,7 @@ padding: 0 50px;
 
 .section-blog::before{
     content: '';
-    background-image: url('/assets/img/blog_image.jpg');
+    background-image: url('../img/blog_image.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     position: absolute;
