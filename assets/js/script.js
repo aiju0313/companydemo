@@ -50,6 +50,7 @@ function applyAnimation(triggerClass, animationClass){
 
 function fadeAnime(){
     applyAnimation('.fadeUpTrigger', 'fadeUp');
+    applyAnimation('.fadeListTrigger', 'ListfadeUp');
     applyAnimation('.fadeRightTrigger', 'fadeRight');
     applyAnimation('.fadeLeftTrigger', 'fadeLeft');
 }

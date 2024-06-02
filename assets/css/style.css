@@ -282,22 +282,7 @@ header{
     animation: pathmove 2.4s ease-in-out infinite;
     opacity: 0;
 }
-@keyframes pathmove{
-    0%{
-      height:0;
-      top:0;
-      opacity: 0;
-    }
-    30%{
-      height:30px;
-      opacity: 1;
-    }
-    100%{
-      height:0;
-      top:50px;
-      opacity: 0;
-    }
-  }
+
 
 /* ------fv_news------- */
 .fv__news{
@@ -1398,22 +1383,32 @@ text-decoration: underline;
 /*==================================================
 アニメーション
 ===================================*/
-    
-    @keyframes fadeUpAnime{
-    from {
-        opacity: 0;
-    transform: translateY(100px);
+
+/* FV:"SCROLL"文字のバーのアニメーション */
+
+@keyframes pathmove{
+    0%{
+      height:0;
+      top:0;
+      opacity: 0;
     }
-    
-    to {
-        opacity: 1;
-    transform: translateY(0);
+    30%{
+      height:30px;
+      opacity: 1;
     }
+    100%{
+      height:0;
+      top:50px;
+      opacity: 0;
     }
+  }
     
     /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
 
     .fadeUpTrigger{
+        opacity: 0;
+    }
+    .fadeListTrigger{
         opacity: 0;
     }
     .fadeRightTrigger{
@@ -1435,13 +1430,45 @@ text-decoration: underline;
     }
 
 
-/* 下から上へのフェードイン */
+/* 下からのフェードイン */
 .fadeUp{
     animation-name:fadeUpAnime;
     animation-duration:1.0s;
     animation-fill-mode:forwards;
     opacity:0;
     }
+    @keyframes fadeUpAnime{
+        from {
+            opacity: 0;
+        transform: translateY(100px);
+        }
+        
+        to {
+            opacity: 1;
+        transform: translateY(0);
+        }
+        }
+
+/* 左下からのフェードイン */
+    .ListfadeUp{
+        animation-name:fadeListAnime;
+        animation-duration:1.0s;
+        animation-fill-mode:forwards;
+        opacity:0;
+        }
+
+        @keyframes fadeListAnime{
+            from {
+                opacity: 0;
+            transform: translateY(100px) translateX(-100px);
+            }
+            
+            to {
+                opacity: 1;
+            transform: translateY(0px) translateX(0);
+            }
+            }
+        
 
     /* 左からのフェードイン */
 .fadeLeft{
