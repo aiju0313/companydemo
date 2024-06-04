@@ -693,7 +693,6 @@ right: 20%;
 
 .section-works__list ul{
     display: flex;
-    column-gap: 50px;
     padding-bottom: 40px;
 }
 .works-list__description{
@@ -1296,9 +1295,6 @@ text-decoration: underline;
 @media screen and (max-width: 768px){
     .section-works__list ul li > button{
         width: 100%;
-    }
-    .section-works__list ul{
-        column-gap: 0;
     }
     .section-works__list ul li p{
         overflow-x: hidden;
